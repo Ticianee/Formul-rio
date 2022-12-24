@@ -1,1 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Cadastro</title>
+</head>
+
+  <body>
+    
+    <div>
+        <h1>Cadastro de Visitantes</h1>
+        <p>Complete as informações</p>
+        <br>
+    </div>
+
+    <form>
+        <fieldset>
+            <div>
+                <label>Nome</label>
+                <input type="text" name="nome" id="nome">
+            </div>
+
+            <div>
+                <label>Sobrenome</label>
+                <input type="text" name="sobrenome" id="sobrenome">
+            </div>
+        </fieldset>
+
+        <div>
+            <label>Quantos anos você tem?</label>
+            <input type="number" name="anos" id="anos">
+        </div>
+        
+        <div>
+            <label>Data de nascimento</label>
+            <input type="date" name="nascimento" id="nascimento">
+        </div>
+        
+        <div>
+            <label>Qual o seu telefone para contato?</label>
+            <input type="tel" name="telefone" id="telefone">
+        </div>
+
+        <div>
+            <label>E-mail</label>
+            <input type="email" name="email" id="email">
+        </div>
+
+        <div>
+            <label>Qual o seu endereço?</label>
+            <input type="text" name="endereco" id="endereco">
+        </div>
+        
+        <div>
+            <label>É sua primeira vez na igreja?</label>
+            <labe>
+                <input type="radio" name="primeiravez" value="sim">Sim
+            </labe>
+            <labe>
+                <input type="radio" name="primeiravez" value="nao">Não
+            </labe>
+        </div>
+
+        <div>
+            <label>Você já frequenta alguma igreja?</label>
+            <labe>
+                <input type="radio" name="frequenta" value="frequentas">Sim
+            </labe>
+            <labe>
+                <input type="radio" name="frequenta" value="frequentan">Não
+            </labe>
+        </div>
+
+        <div>
+            <label>Você participar de alguma célula?</label>
+            <labe>
+                <input type="radio" name="celula" value="celulas">Sim
+            </labe>
+            <labe>
+                <input type="radio" name="celula" value="celulan">Não
+            </labe>
+        </div>
+        
+        <div>
+            <label>Você já é batizado?</label>
+            <labe>
+                <input type="radio" name="batismo" value="batismos">Sim
+            </labe>
+            <labe>
+                <input type="radio" name="batismo" value="batismon">Não
+            </labe>
+        </div>
+
+        <div>
+            <label>Se sim, em qual igreja você se batizou?</label>
+            <select id="igreja">
+                <option selected disabled value="">Selecione</option>
+                <option>Evangélica</option>
+                <option>Católica</option>
+                <option>Não sou batizado(a)</option>
+            </select>
+        </div>
+
+        <button type="submit">Concluído</button>
+
+    </form>
+
+</body>
+</html>
