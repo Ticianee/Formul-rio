@@ -1,113 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-  
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Cadastro</title>
+
+    <style>
+        body{
+            font-family: sans-serif;
+            background-color: #FDF5E6;
+        }
+        .box{
+            color: white;
+            position: absolute;
+            top: 57%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: rgb(0, 0, 0, 0.6);
+            padding: 15px;
+            border-radius: 15px;
+        }
+        fieldset{
+            border: 3px solid darksalmon;
+        }
+        legend{
+            border: 1px solid darksalmon;
+            padding: 10px;
+            text-align: center;
+            background-color: darksalmon;
+            border-radius: 8px;
+        }
+        .inputBox{
+            position: relative;
+        }
+        .inputUser{
+            background: none;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            color: white;
+            font-size: 15px;
+            width: 100%;
+            letter-spacing: 2px;
+        }
+        .labelInput{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            pointer-events: none;
+            transition: .5s;
+        }
+        .inputUser:focus ~ .labelInput,
+        .inputUser:valid ~ .labelInput{
+            top: -20px;
+            font-size: 12px;
+            color: darksalmon;
+        }
+        #nascimento{
+            border: none;
+            padding: 6px;
+            border-radius: 10px;
+            outline: none;
+        }
+        #submit{
+            background-color: #FDF5E6;
+            width: 100%;
+            border: none;
+            padding: 12px;
+            color: black;
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        #submit:hover{
+            background-color: #fae5bf;
+        }
+
+    </style>
 </head>
-
-  <body>
-    
-    <div>
-        <h1>Cadastro de Visitantes</h1>
-        <p>Complete as informações</p>
+<center>
+    <img src="ieq.jpg" height="4%" width="4%">
+</center>
+<body>
+    <div class="box">
         <br>
+        <form action="">
+            <fieldset>
+                <legend><b>Cadastro de Visitantes</b></legend>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="nome" id="nome" class="inputUser" required>
+                    <label for="nome" class="labelInput"><strong>Nome completo</strong></label>
+                </div>
+                <br><br>
+
+                <div class="inputBox">
+                    <input type="number" name="idade" id="idade" class="inputUser" required>
+                    <label for="anos" class="labelInput"><strong>Idade</strong></label>
+                </div>
+                <br>
+                <label for="nascimento"><strong>Data de nascimento</strong></label>
+                <input type="date" name="nascimento" id="nascimento" required>
+                <br><br><br>
+
+                <div class="inputBox">
+                    <input type="tel" name="telefone" id="telefone" class="inputUser" required>
+                    <label for="telefone" class="labelInput"><strong>Telefone</strong></label>
+                </div>
+                <br><br>
+
+                <div class="inputBox">
+                    <input type="email" name="email" id="email" class="inputUser" required>
+                    <label for="email" class="labelInput"><strong>Email</strong></label>
+                </div>
+                <br><br>
+
+                <div class="inputBox">
+                    <input type="text" name="endereco" id="endereco" class="inputUser" required>
+                    <label for="endereco" class="labelInput"><strong>Endereço</strong></label>
+                </div>
+                <br><br>
+
+                <div class="inputBox">
+                    <label><strong>É sua primeira vez na igreja?</strong></label>
+                    <br>
+                    <labe>
+                        <input type="radio" name="primeiravez" value="sim">Sim
+                    </labe>
+                    <br>
+                    <labe>
+                        <input type="radio" name="primeiravez" value="nao">Não
+                    </labe>
+                </div>
+                <br><br>
+        
+                <div class="inputBox">
+                    <label><strong>Você já frequenta alguma igreja?</strong></label>
+                    <br>
+                    <labe>
+                        <input type="radio" name="frequenta" value="frequentas">Sim
+                    </labe>
+                    <br>
+                    <labe>
+                        <input type="radio" name="frequenta" value="frequentan">Não
+                    </labe>
+                </div>
+                <br><br>
+        
+                <div class="inputBox">
+                    <label><strong>Você participa de alguma célula?</strong></label>
+                    <br>
+                    <labe>
+                        <input type="radio" name="celula" value="celulas">Sim
+                    </labe>
+                    <br>
+                    <labe>
+                        <input type="radio" name="celula" value="celulan">Não
+                    </labe>
+                </div>
+                <br><br>
+                
+                <div class="inputBox">
+                    <label><strong>Você já é batizado?</strong></label>
+                    <br>
+                    <labe>
+                        <input type="radio" name="batismo" value="batismos">Sim
+                    </labe>
+                    <br>
+                    <labe>
+                        <input type="radio" name="batismo" value="batismon">Não
+                    </labe>
+                </div>
+                <br><br>
+
+                <div class="inputBox">
+                    <label for="igreja"><strong>Se sim, em qual igreja você se batizou?</strong></label>
+                    <select name="igreja" id="igreja">
+                        <option selected disabled value="">Selecione</option>
+                        <option>Evangélica</option>
+                        <option>Católica</option>
+                        <option>Não sou batizado(a)</option>
+                    </select>
+                </div>
+                <br><br>
+
+                <button class="botao" type="submit" id="submit">Concluído</button>
+            </fieldset>
+        </form>
     </div>
-
-    <form>
-        <fieldset>
-            <div>
-                <label>Nome</label>
-                <input type="text" name="nome" id="nome">
-            </div>
-
-            <div>
-                <label>Sobrenome</label>
-                <input type="text" name="sobrenome" id="sobrenome">
-            </div>
-        </fieldset>
-
-        <div>
-            <label>Quantos anos você tem?</label>
-            <input type="number" name="anos" id="anos">
-        </div>
-        
-        <div>
-            <label>Data de nascimento</label>
-            <input type="date" name="nascimento" id="nascimento">
-        </div>
-        
-        <div>
-            <label>Qual o seu telefone para contato?</label>
-            <input type="tel" name="telefone" id="telefone">
-        </div>
-
-        <div>
-            <label>E-mail</label>
-            <input type="email" name="email" id="email">
-        </div>
-
-        <div>
-            <label>Qual o seu endereço?</label>
-            <input type="text" name="endereco" id="endereco">
-        </div>
-        
-        <div>
-            <label>É sua primeira vez na igreja?</label>
-            <labe>
-                <input type="radio" name="primeiravez" value="sim">Sim
-            </labe>
-            <labe>
-                <input type="radio" name="primeiravez" value="nao">Não
-            </labe>
-        </div>
-
-        <div>
-            <label>Você já frequenta alguma igreja?</label>
-            <labe>
-                <input type="radio" name="frequenta" value="frequentas">Sim
-            </labe>
-            <labe>
-                <input type="radio" name="frequenta" value="frequentan">Não
-            </labe>
-        </div>
-
-        <div>
-            <label>Você participar de alguma célula?</label>
-            <labe>
-                <input type="radio" name="celula" value="celulas">Sim
-            </labe>
-            <labe>
-                <input type="radio" name="celula" value="celulan">Não
-            </labe>
-        </div>
-        
-        <div>
-            <label>Você já é batizado?</label>
-            <labe>
-                <input type="radio" name="batismo" value="batismos">Sim
-            </labe>
-            <labe>
-                <input type="radio" name="batismo" value="batismon">Não
-            </labe>
-        </div>
-
-        <div>
-            <label>Se sim, em qual igreja você se batizou?</label>
-            <select id="igreja">
-                <option selected disabled value="">Selecione</option>
-                <option>Evangélica</option>
-                <option>Católica</option>
-                <option>Não sou batizado(a)</option>
-            </select>
-        </div>
-
-        <button type="submit">Concluído</button>
-
-    </form>
-
 </body>
 </html>
